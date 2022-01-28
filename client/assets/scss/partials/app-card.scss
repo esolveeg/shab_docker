@@ -1,0 +1,105 @@
+.app-card{
+    position: rlative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    // display: none;
+}
+.wrapper{
+    width:400px;
+    position: relative;
+    @media (max-width:400px){
+        width: 100%;
+    }
+}
+img{
+    border-radius:15px;
+    @media (max-width:400px){
+        width: 290px;
+        width: 100%;
+    }
+}
+.card{
+    
+    &-data{
+        position: absolute;
+        top: 0;
+        width: 400px;
+        height: 100%;
+        right: 0;
+        padding: 20px;
+        color: #fff;
+        font-family:"CARD" ;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @media (max-width:400px){
+            width: 100%;
+            padding: 10px;
+
+        }
+    }
+    & h4{
+        font-weight: 400 !important;
+        @media (max-width:400px){
+            font-size: 18px;
+        }
+    }
+    &-name{
+        font-weight: bold !important;
+        font-size: 34px;
+        font-family: "MEMBERSHIP";
+        font-weight: 600;
+        @media (max-width:400px){
+            font-size: 28px;
+        }
+    }
+    &-user{
+        margin-top: 100px;
+        text-align: left;
+        font-family: "TEXT";
+        & h4{
+            font-size: 17px;
+            @media (max-width:600px) {
+                font-size: 14px;
+            }
+        // font-family: "ARNAME";
+
+        }
+        & h5{
+            font-size: 15px;
+            @media (max-width:600px) {
+                font-size: 13px;
+            }
+        }
+        @media (max-width:400px){
+            margin-top: 8px;
+        }
+
+    }
+    &-serial{
+        margin-right: 60px;
+        transform: translateY(-5px);
+        @media (max-width:400px){
+            transform: translateY(-8px);
+            margin-right: 35px;
+        }
+        & .date{
+            font-size: 14px;
+            font-family: "Tjwal";
+            @media (max-width:600px) {
+                font-size: 12px;
+                padding-right: 8px;
+            }
+        }
+        & .serial{
+            font-size: 15px;
+            font-family: "NUMBERS";
+            @media (max-width:600px) {
+                font-size: 12px;
+                padding-right: 8px;
+            }
+        }
+    }
+}
+

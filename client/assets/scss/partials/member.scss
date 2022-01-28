@@ -1,0 +1,41 @@
+.member{
+    background-color: var(--bg-darker);
+    padding: 30px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    transition: all .3s ease-in;
+    &:hover{
+        transform: scale(1.03);
+    }
+
+    & .img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 10px solid;
+        overflow: hidden;
+        margin-bottom: 30px;
+        transition: all .3s ease-in;
+        &:hover{
+            border-color: #fff;
+        }
+        & img {
+            width: 140px;
+            height: 140px;
+        }
+    }
+
+    & h2{
+        height: 65px;
+        text-align: center !important;
+        overflow: hidden;
+        transition: color .3s ease-in;
+        &:hover{
+            color: var(--primary);
+        }
+    }
+}

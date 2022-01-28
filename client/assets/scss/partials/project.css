@@ -1,0 +1,114 @@
+.project-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.project-p:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.project-p .top {
+  position: relative;
+}
+
+.project-p .top .img img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+@media (min-width: 600px) {
+  .project-p .top .img img {
+    height: 200px;
+  }
+}
+
+.project-p .top .logo {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+}
+
+.project-p .top .logo img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.project-p .bottom {
+  padding: 20px;
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--bg-darker);
+}
+
+.project-p .bottom h2 {
+  height: 65px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 10px;
+  z-index: 2;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.project-p .bottom h2:hover {
+  height: auto;
+  overflow: visible;
+}
+
+.project-p .bottom .flag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  color: var(--font-color);
+}
+
+.project-p .bottom .flag .edit-btn i {
+  font-size: 16px;
+  margin-left: 3px;
+}
+/*# sourceMappingURL=project.css.map */

@@ -1,0 +1,153 @@
+
+.nav{
+    background-color: var(--primary);
+    padding: 10px 0;
+    &__wrapper{
+        & .mob-profile{
+            & .member-avatar{
+                width: 65px !important;
+                height: 65px !important;
+            }
+        }
+        & .login a{
+            font-size: 14px !important;
+        }
+        & .user-name{
+            color: var(--font-color);
+            margin-top: 5px;
+            height: 25px;
+            overflow: hidden;
+            display: inline-block;
+            transform: translateX(20%);
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        transition: all .3s  ease-in;
+        & .profile , & .logout{
+            text-align: center;
+            
+            & div:not(.login){
+                max-width: 50px;                        
+                max-height: 50px;
+                margin: 0 auto;
+            }
+            & img{
+                max-width: 50px;                        
+                max-height: 50px;
+            }
+            & .v-icon{
+                color: #fff;
+                font-size: 24px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            & a{
+                color: #fff;
+                display: block;
+            }
+        }
+        & .desktop-nav{
+            & ul {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                padding-left: 0 !important;
+                & li{
+                    margin: 0 10px;
+                    &.profile {
+                        position: relative;
+                        margin-right: 50px;
+                        margin-left: 0;
+                    }
+                    
+                    & a{
+                        color :#fff;
+                        font-size: 20px;
+                    }
+                }
+    
+            }
+            @media(max-width:1000px){
+                display: none;
+            }
+        }
+        & .logo{
+            height: 100px;
+            margin: 10px 0;
+            & svg{
+                height: 100px;
+            }
+        }
+    }
+}
+.drawer-icon{
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    & path{
+        fill:#fff;
+    }
+    @media(max-width: 1000px){
+        display: block;
+    }
+}
+.drawer{
+    background-color: var(--primary) !important;
+    display: block;
+    &-logo{
+        margin: 0 auto;
+        width:150px
+    }
+    &-close{
+        color: #fff !important;
+        font-size: 25px !important;
+        position: absolute !important;
+        cursor: pointer !important;
+        left: 10px;
+        z-index: 3;
+        top: 10px;
+    }
+    
+}
+
+
+.fixed-nav {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    left: 0;
+    z-index: 6;
+    box-shadow: var(--shadow);
+    & .cls-1 {
+        fill: var(--primary);
+        
+    }
+    & .cls-2 {
+        fill: #a6a9ad;
+        
+    }
+    
+    .drawer-icon{
+        display: none;
+        cursor: pointer;
+        & path{
+            fill:#333;
+        }
+        @media(max-width: 1000px){
+            display: block;
+        }
+    }
+    
+    & i{
+        color :#333 !important;
+    }
+    & a{
+        color:#333 !important;
+    }
+    
+}

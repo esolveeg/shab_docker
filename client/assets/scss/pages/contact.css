@@ -1,0 +1,72 @@
+.contact {
+  padding: 50px 0;
+}
+
+.contact .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  width: 100%;
+  gap: 30px;
+}
+
+@media (max-width: 200px) {
+  .contact .wrapper {
+    -ms-grid-columns: 100% 100%;
+        grid-template-columns: 100% 100%;
+  }
+}
+
+.contact .info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .info-wrapper iframe {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.contact .app-info {
+  background-color: var(--primary);
+  padding: 30px;
+}
+
+.contact .app-info h2 {
+  font-size: 22px;
+  text-align: right !important;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact .app-info .v-icon {
+  color: #fff;
+}
+
+.contact .app-info .v-icon.phone {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.contact .app-info p {
+  line-height: 1;
+}
+
+.contact .app-info li {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact .app-info li p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=contact.css.map */

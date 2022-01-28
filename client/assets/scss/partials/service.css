@@ -1,0 +1,43 @@
+.service {
+  width: 150px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in .3s;
+  transition: -webkit-transform ease-in .3s;
+  transition: transform ease-in .3s;
+  transition: transform ease-in .3s, -webkit-transform ease-in .3s;
+}
+
+.service:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.service h2 {
+  font-size: 16px;
+  text-align: center !important;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.service .icon {
+  padding: 30px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.service .icon i {
+  font-size: 60px;
+}
+/*# sourceMappingURL=service.css.map */

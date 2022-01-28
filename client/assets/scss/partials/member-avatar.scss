@@ -1,0 +1,21 @@
+.member-avatar{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    // border: 5px solid var(--primary);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: var(--shadow);
+    // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.76);;
+    
+}
+.member-avatar:hover{
+    z-index: 2;
+    border-color:#fff
+}
+.member-avatar img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,51 @@
+.consultunt{
+    transition: transform .3s ease;
+    &:hover{
+        transform: scale(1.02);
+    }
+    & .img{
+        margin-bottom: 20px;
+        width: 100%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+        overflow: hidden;
+        & img{
+            border-radius: 15px;
+        }
+    }
+    & .skills{
+        & .bar
+            {
+                content: "";
+                height: 2px;
+                background-color: var(--primary);
+               width: 100%;
+            }
+        
+    }
+    & p{
+        height: 75px;
+        overflow: hidden;
+    }
+    & .job-title{
+        cursor: pointer;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    & .chip{
+        border-radius: 20 0 0 20px;
+        color: #fff;
+        margin-left: 10px;
+        &:nth-child(1){
+            background-color: var(--ryady);  
+        }
+        &:nth-child(2){
+            background-color: #450b5c  ;
+        }
+        &:nth-child(3){
+            background-color: #00373a ;
+        }
+    }
+}

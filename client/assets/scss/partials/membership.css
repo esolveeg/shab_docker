@@ -1,0 +1,35 @@
+.membership {
+  padding: 30px;
+  border-radius: 20px;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  text-align: center;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+}
+
+.membership:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.membership img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.membership h3 {
+  color: var(--font-color);
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.membership h2 {
+  text-align: center !important;
+  color: var(--primary);
+  font-size: var(--title-fs);
+}
+/*# sourceMappingURL=membership.css.map */

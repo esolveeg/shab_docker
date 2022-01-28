@@ -1,0 +1,62 @@
+.consultunt {
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.consultunt:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.consultunt .img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.consultunt .img img {
+  border-radius: 15px;
+}
+
+.consultunt .skills .bar {
+  content: "";
+  height: 2px;
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.consultunt p {
+  height: 75px;
+  overflow: hidden;
+}
+
+.consultunt .job-title {
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.consultunt .chip {
+  border-radius: 20 0 0 20px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.consultunt .chip:nth-child(1) {
+  background-color: var(--ryady);
+}
+
+.consultunt .chip:nth-child(2) {
+  background-color: #450b5c;
+}
+
+.consultunt .chip:nth-child(3) {
+  background-color: #00373a;
+}
+/*# sourceMappingURL=consultunt.css.map */

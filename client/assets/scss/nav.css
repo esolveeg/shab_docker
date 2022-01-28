@@ -1,0 +1,187 @@
+.nav {
+  background-color: var(--primary);
+  padding: 10px 0;
+}
+
+.nav__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-transition: all .3s  ease-in;
+  transition: all .3s  ease-in;
+}
+
+.nav__wrapper .mob-profile .member-avatar {
+  width: 65px !important;
+  height: 65px !important;
+}
+
+.nav__wrapper .login a {
+  font-size: 14px !important;
+}
+
+.nav__wrapper .user-name {
+  color: var(--font-color);
+  margin-top: 5px;
+  height: 25px;
+  overflow: hidden;
+  display: inline-block;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.nav__wrapper .profile, .nav__wrapper .logout {
+  text-align: center;
+}
+
+.nav__wrapper .profile div:not(.login), .nav__wrapper .logout div:not(.login) {
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 auto;
+}
+
+.nav__wrapper .profile img, .nav__wrapper .logout img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.nav__wrapper .profile .v-icon, .nav__wrapper .logout .v-icon {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.nav__wrapper .profile a, .nav__wrapper .logout a {
+  color: #fff;
+  display: block;
+}
+
+.nav__wrapper .desktop-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding-left: 0 !important;
+}
+
+.nav__wrapper .desktop-nav ul li {
+  margin: 0 10px;
+}
+
+.nav__wrapper .desktop-nav ul li.profile {
+  position: relative;
+  margin-right: 50px;
+  margin-left: 0;
+}
+
+.nav__wrapper .desktop-nav ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .nav__wrapper .desktop-nav {
+    display: none;
+  }
+}
+
+.nav__wrapper .logo {
+  height: 100px;
+  margin: 10px 0;
+}
+
+.nav__wrapper .logo svg {
+  height: 100px;
+}
+
+.drawer-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.drawer-icon path {
+  fill: #fff;
+}
+
+@media (max-width: 1000px) {
+  .drawer-icon {
+    display: block;
+  }
+}
+
+.drawer {
+  background-color: var(--primary) !important;
+  display: block;
+}
+
+.drawer-logo {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.drawer-close {
+  color: #fff !important;
+  font-size: 25px !important;
+  position: absolute !important;
+  cursor: pointer !important;
+  left: 10px;
+  z-index: 3;
+  top: 10px;
+}
+
+.fixed-nav {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  left: 0;
+  z-index: 6;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+.fixed-nav .cls-1 {
+  fill: var(--primary);
+}
+
+.fixed-nav .cls-2 {
+  fill: #a6a9ad;
+}
+
+.fixed-nav .drawer-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.fixed-nav .drawer-icon path {
+  fill: #333;
+}
+
+@media (max-width: 1000px) {
+  .fixed-nav .drawer-icon {
+    display: block;
+  }
+}
+
+.fixed-nav i {
+  color: #333 !important;
+}
+
+.fixed-nav a {
+  color: #333 !important;
+}
+/*# sourceMappingURL=nav.css.map */

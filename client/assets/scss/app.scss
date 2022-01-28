@@ -1,0 +1,15 @@
+@import './overrides.scss';
+@import './variables.scss';
+@import './utilities.scss';
+@import './nav.scss';
+@import './font.scss';
+@import './footer.scss';
+
+
+
+.avatars .member-avatar {
+    border:none !important;
+    &:hover{
+        border : 5px solid var(--primary) !important;
+    }
+}

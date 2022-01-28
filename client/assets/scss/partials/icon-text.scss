@@ -1,0 +1,35 @@
+.icon-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    & .icon{
+        padding: 30px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        box-shadow:var(--shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & i{
+            font-size: 60px;
+        }
+    }
+    & h2{
+        font-size: var(--title-fs);
+        color: var(--primary);
+        margin: 0;
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+    & p {
+        font-size:var(--p-fs);;
+        margin-top: 16px;
+        color: var(--font-color);
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+}

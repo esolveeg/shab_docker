@@ -1,0 +1,84 @@
+.post-page {
+  padding: 50px 0;
+}
+
+.post-page .img {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.post-page .title {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-radius: 15px;
+  background-color: var(--bg-darker);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-page .title h2 {
+  font-weight: 600;
+}
+
+.post-page .views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--font-color);
+}
+
+.post-page .views i {
+  color: var(--font-color);
+  margin-left: 10px;
+}
+
+.post-page .user {
+  background-color: var(--bg-darker);
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.post-page .user .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-page .user .member-avatar {
+  width: 75px;
+  height: 75px;
+  margin-left: 20px;
+}
+
+.post-page .user img {
+  width: 75px;
+  height: 75px;
+}
+
+.post-page .user P {
+  margin: 0;
+}
+
+.post-page .content {
+  font-size: 18px;
+}
+/*# sourceMappingURL=post.css.map */

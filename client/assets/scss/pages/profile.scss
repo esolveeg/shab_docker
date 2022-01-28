@@ -1,0 +1,109 @@
+.user{
+    padding: 50px 0;
+    &__data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        @media (max-width:1000px) {
+            display: none;
+            
+        }
+        & .member-avatar{
+            margin-bottom: 30px;
+        }
+        & h2{
+            color:var(--font-color);
+            &:hover{
+                color:var(--primary)
+            }
+        }
+    }
+    & .v-tabs{
+        & .v-tabs-bar{
+            padding: 20px 0;
+            background-color: var(--bg-darker);
+            border-radius: 15px;
+            margin-left: 20px;
+        @media (max-width:1000px) {
+            padding: 0;
+            margin-left: 0;
+            margin-bottom: 30px;
+}
+            & .v-tab{
+                justify-content: flex-start !important;
+            }
+            // display: none !important;
+            
+        }
+        & .v-tabs-items{
+            padding: 20px 0;
+            background-color: var(--bg-darker);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+   
+
+
+    &__membership{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .app-card{
+           margin-bottom: 20px;
+        }
+        .v-text-field.v-text-field--solo .v-input__control{
+            max-width: 300px;
+        }
+    }
+    &__msgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & .v-icon{
+            font-size: 260px;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+    &__projects , &__articles{
+        & .not-allowed , .no-data{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            & .v-icon{
+                font-size: 360px;
+            }
+            h2{
+                text-align: center;
+            }
+        }
+    }
+    &__edit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        & .img{
+            margin-bottom: 30px;
+        }
+    }
+    & .app-btn{
+        width: 100%;
+    }
+  
+}
+
+
+ .v-window__container{
+        width:100% !important;
+        padding:20px 30px;
+    }

@@ -1,0 +1,169 @@
+.user {
+  padding: 50px 0;
+}
+
+.user__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+@media (max-width: 1000px) {
+  .user__data {
+    display: none;
+  }
+}
+
+.user__data .member-avatar {
+  margin-bottom: 30px;
+}
+
+.user__data h2 {
+  color: var(--font-color);
+}
+
+.user__data h2:hover {
+  color: var(--primary);
+}
+
+.user .v-tabs .v-tabs-bar {
+  padding: 20px 0;
+  background-color: var(--bg-darker);
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+@media (max-width: 1000px) {
+  .user .v-tabs .v-tabs-bar {
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.user .v-tabs .v-tabs-bar .v-tab {
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+}
+
+.user .v-tabs .v-tabs-items {
+  padding: 20px 0;
+  background-color: var(--bg-darker);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.user__membership {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user__membership .app-card {
+  margin-bottom: 20px;
+}
+
+.user__membership .v-text-field.v-text-field--solo .v-input__control {
+  max-width: 300px;
+}
+
+.user__msgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.user__msgs .v-icon {
+  font-size: 260px;
+}
+
+.user__msgs h2 {
+  text-align: center;
+}
+
+.user__projects .not-allowed, .user__projects .no-data, .user__articles .not-allowed, .user__articles .no-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.user__projects .not-allowed .v-icon, .user__projects .no-data .v-icon, .user__articles .not-allowed .v-icon, .user__articles .no-data .v-icon {
+  font-size: 360px;
+}
+
+.user__projects .not-allowed h2, .user__projects .no-data h2, .user__articles .not-allowed h2, .user__articles .no-data h2 {
+  text-align: center;
+}
+
+.user__edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+.user__edit .img {
+  margin-bottom: 30px;
+}
+
+.user .app-btn {
+  width: 100%;
+}
+
+.v-window__container {
+  width: 100% !important;
+  padding: 20px 30px;
+}
+/*# sourceMappingURL=profile.css.map */

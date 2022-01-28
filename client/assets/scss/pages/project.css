@@ -1,0 +1,196 @@
+.project {
+  padding: 50px 0;
+}
+
+.project .img {
+  text-align: center;
+}
+
+.project .img img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.project .top {
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .project .top {
+    margin-bottom: 30px;
+  }
+}
+
+.project .top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project .top .title h2 {
+  font-size: 30px;
+  text-align: right;
+}
+
+@media (max-width: 500px) {
+  .project .top .title h2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+.project .top .title h3 {
+  font-size: 20px;
+  color: var(--font-color);
+  font-weight: 400;
+  text-align: right;
+}
+
+.project .top .title img {
+  margin-left: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+  .project .top .title img {
+    margin-left: 10px;
+  }
+}
+
+.project .info .v-tabs .v-tabs-bar {
+  background-color: var(--primary) !important;
+}
+
+.project .info .v-tabs .v-tabs-bar .v-tab {
+  font-size: 20px !important;
+  letter-spacing: 0;
+}
+
+.project .info .breif {
+  font-size: 18px;
+}
+
+.project .info .fund {
+  font-size: 18px;
+}
+
+.project .info .app-btn {
+  width: 100%;
+  margin-top: 0;
+  background-color: var(--primary) !important;
+  color: #fff;
+}
+
+.project .meta {
+  background-color: var(--bg-darker);
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project .meta h2 {
+  margin-bottom: 15px;
+}
+
+.project .meta > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+}
+
+.project .meta > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.project .meta > div .v-icon {
+  color: var(--font-color);
+  margin-left: 10px;
+}
+
+.project .meta > div p {
+  margin: 0;
+}
+
+.project .share {
+  padding: 10px 0;
+}
+
+.project .share .v-btn {
+  background-color: var(--bg-darker) !important;
+}
+
+.project iframe {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.project .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+@media (max-width: 500px) {
+  .project .gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.project .gallery .v-image {
+  cursor: pointer;
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.v-dialog--active {
+  position: relative;
+  overflow: hidden;
+}
+
+.v-dialog--active .v-image {
+  max-width: 100%;
+}
+
+.dialog-close {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+.dialog-close .v-icon {
+  color: #fff;
+}
+/*# sourceMappingURL=project.css.map */

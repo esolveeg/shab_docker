@@ -1,0 +1,27 @@
+.service{
+    width: 150px;
+    cursor: pointer;
+    transition: transform ease-in .3s;
+    &:hover{
+        transform: scale(1.02);
+    }
+    h2{
+        font-size: 16px;
+        text-align: center !important;
+        margin-top: 20px;
+        width: 100%;
+    }
+    & .icon{
+        padding: 30px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        box-shadow:var(--shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & i{
+            font-size: 60px;
+        }
+    }
+}

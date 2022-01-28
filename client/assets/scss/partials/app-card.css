@@ -1,0 +1,154 @@
+.app-card {
+  position: rlative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  width: 400px;
+  position: relative;
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+img {
+  border-radius: 15px;
+}
+
+@media (max-width: 400px) {
+  img {
+    width: 290px;
+    width: 100%;
+  }
+}
+
+.card-data {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  right: 0;
+  padding: 20px;
+  color: #fff;
+  font-family: "CARD";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 400px) {
+  .card-data {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.card h4 {
+  font-weight: 400 !important;
+}
+
+@media (max-width: 400px) {
+  .card h4 {
+    font-size: 18px;
+  }
+}
+
+.card-name {
+  font-weight: bold !important;
+  font-size: 34px;
+  font-family: "MEMBERSHIP";
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .card-name {
+    font-size: 28px;
+  }
+}
+
+.card-user {
+  margin-top: 100px;
+  text-align: left;
+  font-family: "TEXT";
+}
+
+.card-user h4 {
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .card-user h4 {
+    font-size: 14px;
+  }
+}
+
+.card-user h5 {
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .card-user h5 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-user {
+    margin-top: 8px;
+  }
+}
+
+.card-serial {
+  margin-right: 60px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+@media (max-width: 400px) {
+  .card-serial {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+    margin-right: 35px;
+  }
+}
+
+.card-serial .date {
+  font-size: 14px;
+  font-family: "Tjwal";
+}
+
+@media (max-width: 600px) {
+  .card-serial .date {
+    font-size: 12px;
+    padding-right: 8px;
+  }
+}
+
+.card-serial .serial {
+  font-size: 15px;
+  font-family: "NUMBERS";
+}
+
+@media (max-width: 600px) {
+  .card-serial .serial {
+    font-size: 12px;
+    padding-right: 8px;
+  }
+}
+/*# sourceMappingURL=app-card.css.map */
