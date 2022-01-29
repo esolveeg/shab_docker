@@ -6,7 +6,8 @@
 .sidebar .v-list-item--active {
   background: var(--main-gredient);
   color: #fff !important;
-  box-shadow: var(--color-boxshadow);
+  -webkit-box-shadow: var(--color-boxshadow);
+          box-shadow: var(--color-boxshadow);
 }
 
 .sidebar .v-list-item--active .primary--text {
@@ -26,13 +27,18 @@
 }
 
 .sidebar .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
 }
 
 .sidebar .logo a img {
   width: 40px;
+  -webkit-transition: var(--primary-transition);
   transition: var(--primary-transition);
   margin-right: 20px;
 }
@@ -46,3 +52,4 @@
   content: "";
   border-bottom: 1px solid black;
 }
+/*# sourceMappingURL=sidebar.css.map */

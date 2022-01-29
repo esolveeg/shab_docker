@@ -11,6 +11,7 @@ func (h *Handler) Register(v1 *echo.Group) {
 	jwtMiddleware := middleware.JWT(utils.JWTSecret)
 	v1.GET("/health", h.CheckHealth)
 	api := v1.Group("/api")
+	api.GET("/validate", h.ValidateUser, jwtMiddleware)
 
 	// auth routes
 	auth := api.Group("/me", jwtMiddleware)

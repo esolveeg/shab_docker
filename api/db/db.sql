@@ -67,6 +67,7 @@ CREATE TABLE users(
     `twitter` VARCHAR(250),
     `featured` BOOLEAN DEFAULT FALSE,
     `active` BOOLEAN DEFAULT FALSE,
+    `admin` BOOLEAN DEFAULT FALSE,
     `deleted_at` datetime
 ) ENGINE = INNODB;
 

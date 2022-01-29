@@ -1500,4 +1500,32 @@ INSERT INTO
 )
 ;
 
+#adimn
+INSERT INTO
+    users (
+        serial,
+        name,
+        name_ar,
+        role_id,
+        city_id,
+        phone,
+        email,
+        password,
+        admin
+      
+    )
+    VALUES
+    (
+    11111,
+    "مسؤول",
+    "admin",
+    3,
+    1,
+    "0500000000",
+    "admin@alshabalriyadi.net",
+    "123456",
+    1
+    
+);
+
 UPDATE users SET active = 1;

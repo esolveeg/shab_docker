@@ -1,6 +1,9 @@
 .view-item {
   padding: 20px 10px;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
   transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
   cursor: pointer;
 }
 
@@ -14,5 +17,7 @@
 }
 
 .view-item:hover {
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
+/*# sourceMappingURL=view.css.map */

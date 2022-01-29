@@ -41,3 +41,14 @@
 .h-full {
   height: 100%;
 }
+
+.app-btn {
+  width: 100%;
+}
+
+.app-error {
+  background-color: var(--error);
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+}

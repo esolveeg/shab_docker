@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Base from "../components/base/base.vue";
-import Home from "../views/Home.vue";
-
+import Base from "@/components/base/base.vue";
+import Home from "@/views/Home.vue";
+import Login from "@/views/Login.vue";
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
@@ -16,32 +16,31 @@ const routes: Array<RouteConfig> = [
         component: Home,
       },
       // users rotues
-     
-          {
-            path: "users",
-            name: "users",
-            component: () => import('../views/users/index.vue'),
-          },
-          
-          {
-            path: "users/edit/:id",
-            name: "users-edit",
-            component: () => import('../views/users/edit.vue'),
-          },
-          {
-            path: "users/view/:id",
-            name: "users-view",
-            component: () => import('../views/users/view.vue'),
-          },
-        
-        
+      {
+        path: "users",
+        name: "users",
+        component: () => import('@/views/users/index.vue'),
+      },
       
-
+      {
+        path: "users/edit/:id",
+        name: "users-edit",
+        component: () => import('@/views/users/edit.vue'),
+      },
+      {
+        path: "users/view/:id",
+        name: "users-view",
+        component: () => import('@/views/users/view.vue'),
+      },
     ]
   },
   {
     path: '/server-error',
-    component: () => import('../views/errors/server.vue'),
+    component: () => import('@/views/errors/server.vue'),
+  },
+  {
+    path: '/login',
+    component:Login
   }
   
 ];

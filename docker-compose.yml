@@ -1,7 +1,6 @@
 version: "3"
 
 services: 
-
   mysql:
     image: mysql:5.7
     ports:
@@ -29,9 +28,19 @@ services:
     networks: 
       - shab-app
 
-    links: 
+    depends_on: 
       - api-shab
 
+
+  admin-shab:
+    image: admin-shab
+    build: ./admin/
+    stdin_open: true
+    restart: on-failure:10
+    ports: 
+      - "8080:8080"
+    networks: 
+      - shab-app
     depends_on: 
       - api-shab
 

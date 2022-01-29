@@ -22,8 +22,7 @@ export default abstract class HttpClient {
   }
 
   private _handleRequest = (config: AxiosRequestConfig) => {
-    // const token = localStorage.getItem('token')
-    const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzY1Mzk2NDMsImlkIjoxfQ.dzPR6BRSOayuIMm9qpeST_Vb4j0OvMaG3eZpodEoDpM`
+    const token = localStorage.getItem('token')
     config.headers['Authorization'] = `Bearer ${token}`;
 
     return config;
@@ -48,12 +47,12 @@ export default abstract class HttpClient {
   private _handleResponse = ({ data }: AxiosResponse) => data;
 
   protected _handleError = (error: any) => {
-    if( typeof error.response == 'undefined' ||error.response.status === 500){
-      // router.push('/server-error')
-    }
-    if(error.response.status == 403){
-      console.log('unauth')
-    }
+    // if( typeof error.response == 'undefined' ||error.response.status === 500){
+    //   // router.push('/server-error')
+    // }
+    // if(error.response.status == 403){
+    //   console.log('unauth')
+    // }
     Promise.reject(error);
   }
 

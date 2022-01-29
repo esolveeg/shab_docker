@@ -82,6 +82,13 @@
         <v-icon class="">mdi-earth</v-icon>
         <!-- mdi-weather-sunny -->
       </v-btn>
+       <v-btn
+        text
+        @click.prevent="logout"
+      >
+        <v-icon class="">mdi-logout</v-icon>
+        <!-- mdi-weather-sunny -->
+      </v-btn>
     </v-app-bar>
     <!-- <div class="breadcrumbs"></div> -->
   </div>
@@ -105,6 +112,10 @@ export default {
         : localStorage.setItem("mode", "dark");
 
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+    logout(){
+      localStorage.removeItem('token')
+      this.$router.push('/login')
     },
     switchLanguage() {
       const locale = this.$vuetify.rtl ? "en" : "ar";

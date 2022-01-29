@@ -55,7 +55,7 @@
                     </v-btn>
                 </v-col>
                 <v-col cols="12" class="text-center">
-                    <v-btn :disabled="!valid" :loading="loading" @click.prevent="login" class="app-btn">تسجيل دخول</v-btn>
+                     <v-btn :disabled="!valid" :loading="loading" @click.prevent="login" class="app-btn">تسجيل دخول</v-btn>
                 </v-col>
                 </v-row>
             </v-form>

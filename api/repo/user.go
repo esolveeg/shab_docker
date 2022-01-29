@@ -81,6 +81,7 @@ func (ur *UserRepo) GetByEmailOrPhone(emailOrPhone string) (*model.User, error) 
 	fmt.Println(emailOrPhone)
 	err := ur.db.Raw("CALL UserRead(?);", emailOrPhone).Row().Scan(
 		&user.Id,
+		&user.Admin,
 		&user.Name,
 		&user.Name_ar,
 		&user.Email,

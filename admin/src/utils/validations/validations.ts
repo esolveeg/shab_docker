@@ -15,17 +15,28 @@ export const updateUserValidation = {
     Name_ar :[
       (value:string) => required(value) ,
       (value:string) => name(value) ,
-  ],
-   Name :[
-      (value:string) => required(value) ,
-      (value:string) => name(value) ,
-  ],
-    Email :[
-      (value:string) => email(value , "تحقق من البريد اللاكتروني")
-  ],
-  
-   Phone :[
-      (value:string) => required(value) ,
-  ],
+    ],
+    Name :[
+        (value:string) => required(value) ,
+        (value:string) => name(value) ,
+    ],
+        Email :[
+        (value:string) => email(value , "تحقق من البريد اللاكتروني")
+    ],
+    
+    Phone :[
+        (value:string) => required(value) ,
+    ],
+
+}
+
+export const loginValidation = {
+    Username :[
+        (value:string) => email(value , "تحقق من البريد اللاكتروني")
+    ],
+    
+    Password :[
+        (value:string) => required(value) ,
+    ],
 
 }

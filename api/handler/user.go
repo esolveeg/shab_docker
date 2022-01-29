@@ -12,6 +12,9 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+func (h *Handler) ValidateUser(c echo.Context) error {
+	return c.JSON(http.StatusOK, true)
+}
 func (h *Handler) Me(c echo.Context) error {
 	id := userIDFromToken(c)
 	fmt.Println(id)
@@ -153,6 +156,7 @@ func newUserResponse(u *model.User) *model.UserResponse {
 	r.User.Twitter = u.Twitter
 	r.User.Role = u.Role
 	r.User.Color = u.Color
+	r.User.Admin = u.Admin
 	r.Token = utils.GenerateJWT(u.Id)
 	return r
 }

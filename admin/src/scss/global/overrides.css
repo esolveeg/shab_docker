@@ -1,4 +1,5 @@
 .v-application, .bgdarker {
+  -webkit-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
 
@@ -12,6 +13,7 @@ tbody tr.v-data-table__mobile-table-row td:first-child {
 }
 
 .v-navigation-drawer, .v-app-bar {
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
@@ -42,6 +44,8 @@ tbody tr.v-data-table__mobile-table-row td:first-child {
 }
 
 .v-data-table__wrapper .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -69,3 +73,4 @@ tbody tr.v-data-table__mobile-table-row td:first-child {
 .m-chart:nth-child(4) .mini-chart {
   background-color: var(--bg-3);
 }
+/*# sourceMappingURL=overrides.css.map */

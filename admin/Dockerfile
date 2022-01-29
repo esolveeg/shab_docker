@@ -3,8 +3,8 @@ FROM node:12.16.3-alpine3.9
 
 # install simple http server for serving static content
 RUN npm install -g http-server
-RUN mkdir -p /var/www/admin
-WORKDIR /var/www/admin
+RUN mkdir -p /var/www/dockerize-vue/admin
+WORKDIR /var/www/dockerize-vue/admin
 
 COPY package*.json ./
 RUN npm install

@@ -36,6 +36,7 @@ type UserResponse struct {
 
 type User struct {
 	Id        uint
+	Admin     bool
 	Name      string
 	Name_ar   string
 	Email     string
