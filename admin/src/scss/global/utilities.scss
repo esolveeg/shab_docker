@@ -1,0 +1,36 @@
+
+.text-color{
+    color:var(--text-color) !important
+}
+.danger{
+    background-color: lightcoral;
+    color: #fff;
+    padding: 20px;
+}
+.w-full{
+    width: 100%;
+}
+
+.bg-primary{
+    background-color: var(--primary);
+}
+.bg-gredient{
+    background: var(--main-gredient);
+}
+.primary-text{
+    color:var(--primary);
+}
+.md-hidden{
+    @media(max-width:600px){
+        display: none !important;
+    }
+}
+.w-40{
+    width: 40px;
+}
+.transition{
+    transition: var(--transition)
+}
+.h-full{
+    height: 100%;
+}
