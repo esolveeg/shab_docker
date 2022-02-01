@@ -5,6 +5,21 @@
   -ms-grid-columns: 70% 30%;
       grid-template-columns: 70% 30%;
   gap: 20px;
+      grid-template-areas: "event sidebar";
+}
+
+@media (max-width: 600px) {
+  .event-page .event-wrapper {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "event" "sidebar";
+  }
+}
+
+.event-page .event-wrapper .desc {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: event;
 }
 
 .event-page .event-wrapper .title {
@@ -31,6 +46,12 @@
   border-radius: 5px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
+}
+
+.event-page .event-wrapper .left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: sidebar;
 }
 
 .event-page .event-wrapper .left > div {

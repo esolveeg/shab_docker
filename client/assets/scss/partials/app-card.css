@@ -1,12 +1,9 @@
 .app-card {
   position: rlative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-bottom: 20px;
+  user-select: none;
 }
 
 .wrapper {
@@ -31,8 +28,33 @@ img {
   }
 }
 
+.water_mark {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  opacity: 0.2;
+  transform: rotate(-35deg);
+  user-select: none;
+}
+
+.water_mark p {
+  user-select: none;
+  margin: 10px 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@media (max-width: 400px) {
+  .water_mark p {
+    margin: 5px;
+  }
+}
+
 .card-data {
   position: absolute;
+  overflow: hidden;
   top: 0;
   width: 400px;
   height: 100%;
@@ -40,16 +62,9 @@ img {
   padding: 20px;
   color: #fff;
   font-family: "CARD";
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 @media (max-width: 400px) {
@@ -72,6 +87,7 @@ img {
 .card-name {
   font-weight: bold !important;
   font-size: 34px;
+  z-index: 2;
   font-family: "MEMBERSHIP";
   font-weight: 600;
 }
@@ -84,6 +100,7 @@ img {
 
 .card-user {
   margin-top: 100px;
+  z-index: 2;
   text-align: left;
   font-family: "TEXT";
 }
@@ -110,20 +127,19 @@ img {
 
 @media (max-width: 400px) {
   .card-user {
-    margin-top: 8px;
+    margin-top: 45px;
   }
 }
 
 .card-serial {
   margin-right: 60px;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  z-index: 2;
+  transform: translateY(-5px);
 }
 
 @media (max-width: 400px) {
   .card-serial {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
+    transform: translateY(-8px);
     margin-right: 35px;
   }
 }
@@ -151,4 +167,3 @@ img {
     padding-right: 8px;
   }
 }
-/*# sourceMappingURL=app-card.css.map */

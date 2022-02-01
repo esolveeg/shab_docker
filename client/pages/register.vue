@@ -60,7 +60,7 @@
                   :disabled="!valid"
                   :loading="loading"
                   @click.prevent="stepper = 2"
-                  class="app-btn"
+                  class="app-btn  w-full"
                   >ارسال الطلب</v-btn
                 >
               </v-col>
@@ -68,27 +68,79 @@
           </v-form>
         </v-stepper-content>
 
-
         <v-stepper-step :complete="stepper > 2" step="2">
           <div class="d-flex justify-space-between w-full">
-            <span>ارسال طلب البطاقة </span>
+            <span>اختر نوع البطاقة </span>
           </div>
         </v-stepper-step>
 
         <v-stepper-content step="2">
           <v-card>
-            <v-card-title v-if="roles != null">
-              قم بعمل تحويل بمبلع {{price(roles[form.Role_id - 1].Price)}} الي هذا الحساب البنكي و سيتم التواصل
-              معك لتاكيد العضوية
-            </v-card-title>
             <v-card-text>
-              <ul>
-                <li>آيبان : SA9010000012472813000102</li>
-                <li>الحساب : 12472813000102</li>
-              </ul>
+              <v-row>
+                <v-col cols="6">
+                  <div class="text-center d-flex align-center justify-center">
+                  <v-chip class="ma-2" color="indigo" text-color="white">
+                    <v-avatar left>
+                      <v-icon>mdi-overscan</v-icon>
+                    </v-avatar>
+                    الكترونية
+                  </v-chip>
+                  </div>
+                </v-col>
+                <v-col cols="6">
+                  <div class="text-center d-flex align-center justify-center">
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-chip
+                          class="ma-2"
+                          color="grey"
+                          text-color="white"
+                          v-bind="attrs"
+                          v-on="on"
+                        >
+                          <v-avatar left>
+                            <v-icon>mdi-printer-outline</v-icon>
+                          </v-avatar>
+                          مطبوعة
+                        </v-chip>
+                      </template>
+                      <span>غير مفعل الان</span>
+                    </v-tooltip>
+                  </div>
+                </v-col>
+              </v-row>
             </v-card-text>
           </v-card>
-          <v-btn color="primary mt-4" @click="register"> تاكيد </v-btn>
+          <v-btn color="primary mt-4 app-btn w-full" @click="stepper=3"> استمرار </v-btn>
+        </v-stepper-content>
+        <v-stepper-step :complete="stepper > 3" step="3">
+          <div class="d-flex justify-space-between w-full">
+            <span>ارسال طلب البطاقة</span>
+          </div>
+        </v-stepper-step>
+
+        <v-stepper-content step="3">
+          <v-card>
+            <v-card-text>
+              <v-row>
+                <v-col cols="6">
+                  <p>تحويل بنكي</p>
+                  <ul>
+                    <li>آيبان : SA9010000012472813000102</li>
+                    <li>الحساب : 12472813000102</li>
+                  </ul>
+                </v-col>
+                <v-col cols="6">
+                  <p>دفع الكتروني</p>
+                  <ul>
+                    <li>غير مفعل ف الوقت الحالي</li>
+                  </ul>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+          <v-btn color="primary mt-4 app-btn w-full" @click="register"> تاكيد </v-btn>
         </v-stepper-content>
       </v-stepper>
     </v-container>
@@ -179,8 +231,11 @@ export default {
         .then((d) => {
           this.error = null
           this.loading = false
-          this.$store.commit('ui/snackBar', 'تم استلام الطلب بنجاح سنقوم بالتواصل معك')
-          this.$router.push("/")
+          this.$store.commit(
+            'ui/snackBar',
+            'تم استلام الطلب بنجاح سنقوم بالتواصل معك'
+          )
+          this.$router.push('/')
         })
         .catch((e) => {
           console.log(e)
@@ -201,9 +256,9 @@ export default {
   //   }
   // },
   created() {
-    if(this.user != null){
+    if (this.user != null) {
       this.$store.commit('ui/snackBar', 'انت بالفل مشترك')
-      this.$router.push("/")
+      this.$router.push('/')
       return
     }
     const roleId = parseInt(this.$route.query.role)

@@ -17,6 +17,9 @@
         v-if="user.Role_id == 3"
       />
       <div class="card-data">
+    <div class="water_mark">
+      <p v-for="i in 20" :key="i">معاينة</p>
+    </div>
         <h4 class="card-name"></h4>
         <div class="card-user">
           <h4>{{ user.Name_ar }}</h4>
