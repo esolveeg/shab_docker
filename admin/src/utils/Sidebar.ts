@@ -8,6 +8,11 @@ export default [
         title: "sidebar.users",
         to: `/users`,
       },
+      {
+        icon: "mdi-account-outline",
+        title: "sidebar.consultutns",
+        to: `/consultunts`,
+      },
     ]
   },
   

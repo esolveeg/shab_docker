@@ -24,6 +24,7 @@ func main() {
 	catRepo := repo.NewCatRepo(db)
 	cityRepo := repo.NewCityRepo(db)
 	sereviceRepo := repo.NewServiceRepo(db)
+	consultuntsRepo := repo.NewConsultuntsRepo(db)
 	h := handler.NewHandler(
 		userRepo,
 		richRepo,
@@ -35,6 +36,7 @@ func main() {
 		catRepo,
 		cityRepo,
 		sereviceRepo,
+		consultuntsRepo,
 	)
 	h.Register(v1)
 	r.Logger.Fatal(r.Start(":5000"))

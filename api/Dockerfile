@@ -13,5 +13,5 @@ COPY . .
 RUN go build -o /docker-shab
 
 
-EXPOSE 8587
+EXPOSE 5000
 CMD [ "/docker-shab" ]

@@ -774,7 +774,66 @@ BEGIN
        *
      FROM consultunts;
 END//
+
+
+
 DELIMITER ;
+
+DROP PROCEDURE IF EXISTS ConsultuntsCreate;
+
+
+DELIMITER //
+CREATE  PROCEDURE `ConsultuntsCreate`(
+    IN Iname VARCHAR(250),
+    IN Ititle VARCHAR(250),
+    IN Iskills VARCHAR(250),
+    IN Iimg TEXT,
+    IN Ibreif TEXT
+)
+BEGIN
+    INSERT INTO consultunts (
+        name,
+        title,
+        skills,
+        img,
+        breif
+    )
+    VALUES (
+        Iname,
+        Ititle,
+        Iskills,
+        Iimg,
+        Ibreif
+    );
+END//
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS ConsultuntsUpdate;
+
+
+DELIMITER //
+CREATE  PROCEDURE `ConsultuntsUpdate`(
+    IN Iid INT,
+    IN Iname VARCHAR(250),
+    IN Ititle VARCHAR(250),
+    IN Iskills VARCHAR(250),
+    IN Iimg TEXT,
+    IN Ibreif TEXT
+)
+BEGIN
+    UPDATE consultunts SET 
+        name = Iname ,
+        title = Ititle ,
+        skills = Iskills ,
+        img = Iimg ,
+        breif = Ibreif 
+    WHERE id = Iid;
+END//
+DELIMITER ;
+
+
+
+
 
 
 

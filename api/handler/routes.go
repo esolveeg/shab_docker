@@ -59,9 +59,17 @@ func (h *Handler) Register(v1 *echo.Group) {
 	rich.GET("", h.RichListByGroup)
 	rich.GET("/key", h.RichGetByKey)
 
+	//consultunts routes
+	consultunts := api.Group("/consultunts")
+
+	consultunts.GET("", h.ConsultuntsListAll)
+	consultunts.POST("", h.ConsultuntsCreate)
+	consultunts.PUT("/:id", h.ConsultuntsUpdate)
+
+	// global routes
+
 	api.POST("/upload", h.Upload)
 	api.GET("/home", h.HomeGetAllData)
-	api.GET("/consultunts", h.ConsultuntsListAll)
 	api.GET("/videos", h.VideosListAll)
 	api.GET("/cats/:type", h.CatsListByType)
 	api.GET("/cities", h.CitiesListAll)

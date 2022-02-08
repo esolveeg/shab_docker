@@ -80,14 +80,6 @@ func (h *Handler) RegisterUser(c echo.Context) error {
 	return c.JSON(http.StatusOK, u)
 }
 
-func (h *Handler) ConsultuntsListAll(c echo.Context) error {
-	u, err := h.userRepo.ConsultuntsListAll()
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, utils.NewError(err))
-	}
-	return c.JSON(http.StatusOK, u)
-}
-
 func (h *Handler) CurrentUserUpdate(c echo.Context) error {
 	id := userIDFromToken(c)
 	req := new(model.UserRegisterRequest)

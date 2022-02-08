@@ -32,6 +32,13 @@ const routes: Array<RouteConfig> = [
         name: "users-view",
         component: () => import('@/views/users/view.vue'),
       },
+
+      // consultutns rotues
+      {
+        path: "consultutns",
+        name: "consultutns",
+        component: () => import('@/views/consultunts/index.vue'),
+      },
     ]
   },
   {

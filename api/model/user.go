@@ -53,12 +53,3 @@ type User struct {
 	Color     string
 	Password  string
 }
-
-type Consultunt struct {
-	Id      uint
-	Name_ar string
-	Title   string
-	Skills  string
-	Img     string
-	Breif   string
-}

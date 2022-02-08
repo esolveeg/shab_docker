@@ -22,6 +22,10 @@ services:
     image: client-shab
     build: ./client/
     stdin_open: true
+    volumes:
+      - ./client:/var/www/dockerize-nuxt/nuxt-app
+      - /var/www/dockerize-nuxt/nuxt-app/node_modules
+
     ports: 
       - "3000:3000"
 
@@ -68,4 +72,7 @@ networks:
 
 volumes: 
   mysql-data:
+    driver: local
+
+  client:
     driver: local
