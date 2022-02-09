@@ -43,3 +43,13 @@
     color: #fff;
     border-radius: 5px;
 }
+.datatable-header{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:first-child{
+        width: 50%;
+        margin: 0 20px;
+    }
+}

@@ -52,19 +52,3 @@ export const UpdateUser = (payload:Object , id:number) => {
     })
 }
 
-
-export const Upload = (payload:Object) => {
-    return new Promise((resolve, reject) => {
-        Http.post('upload' , payload , {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-          })
-        .then((d) => {
-            console.log(d)
-            resolve(d)
-        }).catch(e => {
-            reject(e)
-        })
-    })
-}

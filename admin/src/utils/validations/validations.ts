@@ -40,3 +40,21 @@ export const loginValidation = {
     ],
 
 }
+export const CreateUpdateConsultuntsValidation = {
+    Name :[
+        (value:string) => required(value)
+    ],
+    Title :[
+        (value:string) => required(value)
+    ],
+    
+    Skills :[
+        (value:string) => required(value) ,
+    ],
+    
+    
+    Breif :[
+        (value:string) => required(value) ,
+    ],
+
+}

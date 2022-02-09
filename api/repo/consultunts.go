@@ -19,7 +19,7 @@ func NewConsultuntsRepo(db *gorm.DB) ConsltuntsRepo {
 	}
 }
 
-func (ur *UserRepo) ConsultuntsListAll() (*[]model.Consultunt, error) {
+func (ur *ConsltuntsRepo) ConsultuntsListAll() (*[]model.Consultunt, error) {
 	rows, err := ur.db.Raw("CALL ConsultuntsListAll();").Rows()
 	if err != nil {
 		utils.NewError(err)
@@ -53,7 +53,7 @@ func (ur *UserRepo) ConsultuntsListAll() (*[]model.Consultunt, error) {
 	return &resp, nil
 }
 
-func (ur *UserRepo) ConsultuntsCreate(req *model.CreateConsultuntReq) (string, error) {
+func (ur *ConsltuntsRepo) ConsultuntsCreate(req *model.ConsultuntCreateReq) (string, error) {
 	rows, err := ur.db.Raw("CALL ConsultuntsCreate(? , ? , ? ,? , ?);",
 		req.Name,
 		req.Title,
@@ -70,7 +70,7 @@ func (ur *UserRepo) ConsultuntsCreate(req *model.CreateConsultuntReq) (string, e
 
 	return "created", nil
 }
-func (ur *UserRepo) ConsultuntsUpdate(req *model.Consultunt) (string, error) {
+func (ur *ConsltuntsRepo) ConsultuntsUpdate(req *model.Consultunt) (string, error) {
 	rows, err := ur.db.Raw("CALL ConsultuntsUpdate(? , ? , ? , ? ,? , ?);",
 		req.Id,
 		req.Name_ar,
@@ -87,4 +87,23 @@ func (ur *UserRepo) ConsultuntsUpdate(req *model.Consultunt) (string, error) {
 	defer rows.Close()
 
 	return "updated", nil
+}
+
+func (ur *ConsltuntsRepo) ConsultuntById(id int) (*model.Consultunt, error) {
+	var resp model.Consultunt
+
+	err := ur.db.Raw("CALL ConsultuntById(?);", id).Row().Scan(
+		&resp.Id,
+		&resp.Name_ar,
+		&resp.Title,
+		&resp.Skills,
+		&resp.Img,
+		&resp.Breif,
+	)
+	if err != nil {
+		fmt.Println("error calling proc" + err.Error())
+		utils.NewError(err)
+		return nil, err
+	}
+	return &resp, nil
 }

@@ -35,9 +35,19 @@ const routes: Array<RouteConfig> = [
 
       // consultutns rotues
       {
-        path: "consultutns",
-        name: "consultutns",
+        path: "consultunts",
+        name: "consultunts",
         component: () => import('@/views/consultunts/index.vue'),
+      },
+      {
+        path: "consultunts/edit/:id",
+        name: "consultunts-edit",
+        component: () => import('@/views/consultunts/edit.vue'),
+      },
+      {
+        path: "consultunts/create",
+        name: "consultunts-create",
+        component: () => import('@/views/consultunts/create.vue'),
       },
     ]
   },

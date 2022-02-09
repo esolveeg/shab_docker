@@ -6,7 +6,11 @@
   "select_data" : "please provide required fields to view the report",
   "not_defined" :"not defined",
   "sidebar" : {
-    "users":"users"
+    "users":"users",
+    "products" : "products",
+    "orders" : "orders",
+    "dashboard" : "dashboard",
+    "consultutns" : "consultutns"
   },
   "table" : {
     "edit" : "edit",

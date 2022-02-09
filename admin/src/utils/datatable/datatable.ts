@@ -21,6 +21,7 @@ export default class Datatable{
     filters?:Form
     error:boolean = false
     hasEdit:boolean = false
+    hasCreate:boolean = false
     hasView:boolean = false
     totals:Totals[] = []
     public constructor(details:DatatableIntetrface){
@@ -33,6 +34,7 @@ export default class Datatable{
         if(details.searchable) this.searchable  = details.searchable
         if(details.hasEdit) this.hasEdit  = details.hasEdit
         if(details.hasView) this.hasView  = details.hasView
+        if(details.hasCreate) this.hasCreate  = details.hasCreate
         if(details.filters){
             this.filters = details.filters
             this.hasFilters = true

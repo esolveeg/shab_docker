@@ -1,7 +1,7 @@
 package model
 
 type Consultunt struct {
-	Id      uint
+	Id      int
 	Name_ar string
 	Title   string
 	Skills  string
@@ -9,7 +9,7 @@ type Consultunt struct {
 	Breif   string
 }
 
-type CreateConsultuntReq struct {
+type ConsultuntCreateReq struct {
 	Name   string
 	Title  string
 	Skills string

@@ -4,6 +4,8 @@
   "sidebar" : {
     "products" : "منتجات",
     "orders" : "الطلبات",
+    "users" : "المستخدمين",
+    "dashboard" : "لوحة التحكم",
     "consultutns" : "المستشارين"
   }
 }

@@ -23,15 +23,29 @@
                <div class="pa-4">
                 <v-btn v-if="!table.error && table.hasFooter && (!table.hasFilters || table.filters.valid)" color="primary" class="w-full my-4" @click.prevent="showTotals">{{$t('show_totals')}}</v-btn>
                </div>
-               <v-container v-if="table.searchable">
+               <div class="datatable-header">
                  <v-text-field
                   v-model="table.search"
                   prepend-icon="mdi-magnify"
                   :label="$t('search')"
                   single-line
                   hide-details
+                  v-if="table.searchable"
                 ></v-text-field>
-               </v-container>
+                <v-btn
+                    @click.prevent="$router.push({name:`${$route.name}-create`})"
+                    color="primary"
+                    class="mr-4"
+                    v-if="table.hasCreate"
+                  >
+                  <v-icon
+                    small
+                  >
+                    mdi-plus
+                  </v-icon>
+                </v-btn>
+               </div>
+              
             </template>
             <template v-slot:body v-if="table.error">
               <tr class="text-center py-4">
@@ -164,7 +178,7 @@ export default Vue.extend({
       return this.table.headers.filter((header:Header) => {
         return header.isTotal ? header : ''
       })
-    }
+    },
   },
   methods: {
     currency: (x: number) => currency(x),

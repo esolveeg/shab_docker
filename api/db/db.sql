@@ -19,7 +19,7 @@ CREATE TABLE consultunts(
     `name` VARCHAR(250),
     `title` VARCHAR(250),
     `skills` text,
-    `img` VARCHAR(250),
+    `img` VARCHAR(250) DEFAULT "assets/members/default.png",
     `breif` TEXT
 ) ENGINE = INNODB;
 

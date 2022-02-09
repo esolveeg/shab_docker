@@ -33,6 +33,18 @@
                       outlined
                     ></v-file-input>
                 </v-col>
+                 <v-col cols="12" md="6">
+                    <v-select
+                    label="العضوية"
+                    v-model="form['Role_id']"
+                    :items="roles"
+                    item-text="title"
+                    item-value="id"
+                    rows="3"
+                    :error-messages="errors['Role']"
+                    outlined
+                    ></v-select>
+                </v-col>
                 <v-col cols="12" md="6">
                     <v-textarea
                     :label="breif.label"
@@ -57,7 +69,8 @@
 </template>
 <script >
 import {required , updateUserValidation } from '@/utils/validations/validations.ts'
-import {UpdateUser , Upload , UserById} from '@/repositories/user'
+import {UpdateUser  , UserById} from '@/repositories/user'
+import { Upload} from '@/repositories/global'
 // import {snackBar} from '@/utils/Helpers'
 export default {
     data(){
@@ -69,6 +82,21 @@ export default {
             valid:true,
             user:{},
             userLoading:true,
+            roles:[
+              {
+                id : 1,
+                title : "مبادر"
+              },
+               {
+                id : 2,
+                title : "طموح"
+              },
+               {
+                id : 3,
+                title : "ريادي"
+               }
+              
+            ],
             updateUserValidation,
             inputs:[
                 {
@@ -106,15 +134,6 @@ export default {
                 label:"رابط انستجرام",
                 key:"Instagram"
                 },
-               
-                
-                     {
-                    label:"العضوية",
-                    key:"Role",
-                    disabled:true
-    
-                    },
-                
             ],
             breif: {
                 label:"النبذة التعرفية",
@@ -163,6 +182,7 @@ export default {
             .then(d => {
                 console.log(d)
                 this.form.Img = d
+                
                 console.log(this.form)
                 console.log(d)
             })
@@ -174,7 +194,17 @@ export default {
        UserById(parseInt(this.$route.params.id)).then((res) => {
           this.user = res
           this.userLoading = false
+          console.log("this.form")
+          console.log(this.form)
           this.form = {...this.user}
+          console.log("this.form")
+          console.log(this.form)
+          console.log(this.form.Email)
+          
+          if (res.Email = ""){
+            this.form.Email = ""
+          }
+
           Object.keys(this.user).forEach(key => {
               this.errors[key] = []
           })

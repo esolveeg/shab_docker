@@ -17,7 +17,7 @@ const params:DatatableIntetrface = {
     url,
     hasFooter:false,
     hasEdit:true,
-    hasView:true
+    hasCreate:true
 }
 const datatable = new Datatable(params)
 export default datatable

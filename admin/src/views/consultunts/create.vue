@@ -2,7 +2,7 @@
 <div class="py-12">
   <v-container>
     <v-card>
-      <v-card-text v-if="!consultuntLoading">
+      <v-card-text >
          <v-form ref="form" v-model="valid">
                 <v-row>
                 <v-col cols="12" >
@@ -37,9 +37,9 @@
                     <v-textarea
                     label="نبذة تعريفية"
                     @keyup.enter="valid ? submit : ''"
-                    v-model="form['Breif']"
+                    v-model="form['breif']"
                     rows="3"
-                    :error-messages="errors['Breif']"
+                    :error-messages="errors['breif']"
                     outlined
                     ></v-textarea>
                 </v-col>
@@ -57,7 +57,7 @@
 </template>
 <script >
 import {required , CreateUpdateConsultuntsValidation } from '@/utils/validations/validations.ts'
-import {UpdateConsultunt , ConsultuntById} from '@/repositories/consultunt'
+import {CreateConsultunt } from '@/repositories/consultunt'
 import {Upload} from '@/repositories/global'
 
 // import {snackBar} from '@/utils/Helpers'
@@ -105,7 +105,7 @@ export default {
         this.$refs.form.validate()
           if(this.valid){
              this.loading = true
-                UpdateConsultunt(this.form , parseInt(this.$route.params.id)).then(d => {
+                CreateConsultunt(this.form ).then(d => {
                     this.error = null
                     this.loading = false
                     this.error =null
@@ -139,16 +139,7 @@ export default {
         },
     }
   },
-    created(){
-       ConsultuntById(parseInt(this.$route.params.id)).then((res) => {
-          this.consultunt = res
-          this.consultuntLoading = false
-          this.form = {...this.consultunt}
-          Object.keys(this.consultunt).forEach(key => {
-              this.errors[key] = []
-          })
-      })
-    },
+  
   
 }
 </script>

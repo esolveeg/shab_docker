@@ -779,6 +779,20 @@ END//
 
 DELIMITER ;
 
+
+
+DELIMITER //
+DROP PROCEDURE IF EXISTS ConsultuntById ;
+
+CREATE  PROCEDURE `ConsultuntById`(IN Iid INT)
+BEGIN
+    SELECT 
+       *
+     FROM consultunts WHERE id = Iid;
+END//
+DELIMITER ;
+
+
 DROP PROCEDURE IF EXISTS ConsultuntsCreate;
 
 
@@ -931,4 +945,5 @@ BEGIN
     SELECT id,name,icon from services;
 END//
 DELIMITER ;
+
 

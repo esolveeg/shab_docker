@@ -22,4 +22,5 @@ export default interface DatatableIntetrface {
     hasFooter:boolean
     hasEdit?:boolean
     hasView?:boolean
+    hasCreate?:boolean
 }

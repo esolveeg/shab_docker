@@ -65,6 +65,7 @@ func (h *Handler) Register(v1 *echo.Group) {
 	consultunts.GET("", h.ConsultuntsListAll)
 	consultunts.POST("", h.ConsultuntsCreate)
 	consultunts.PUT("/:id", h.ConsultuntsUpdate)
+	consultunts.GET("/:id", h.ConsultuntById)
 
 	// global routes
 
