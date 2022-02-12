@@ -723,25 +723,21 @@ CREATE PROCEDURE UserUpdate(
     IN Itwitter VARCHAR(250)
 ) BEGIN
 
-DECLARE pswd VARCHAR(50) DEFAULT NULL;
-IF IPassword != '' THEN
-    SET pswd = IPassword;
-END IF;
 UPDATE
     users u
 SET
     u.name = Iname,
     u.name_ar = Iname_ar,
-    u.email = Iemail,
-    u.password = pswd,
+    u.email =  CASE WHEN Iemail = "" THEN u.email ELSE Iemail END ,
+    u.password = CASE WHEN IPassword = "" THEN u.password ELSE IPassword END,
     u.serial = Iserial,
-    u.role_id = Irole_id,
-    u.img = Iimg,
+    u.role_id = CASE WHEN Irole_id = "" THEN u.role_id ELSE Irole_id END,
+    u.img = CASE WHEN Iimg = "" THEN u.img ELSE Iimg END,
     u.phone = Iphone,
-    u.breif = Ibreif,
-    u.website = Iwebsite,
-    u.instagram = Iinstagram,
-    u.twitter = Itwitter
+    u.breif = CASE WHEN Ibreif = "" THEN u.breif ELSE Ibreif END ,
+    u.website = CASE WHEN Iwebsite = "" THEN u.website ELSE Iwebsite END,
+    u.instagram = CASE WHEN Iinstagram = "" THEN u.instagram ELSE Iinstagram END,
+    u.twitter = CASE WHEN Itwitter = "" THEN u.twitter ELSE Itwitter END
 WHERE
     u.id = id;
 

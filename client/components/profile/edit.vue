@@ -141,6 +141,7 @@ export default {
           this.$refs.form.validate()
           if(this.valid){
              this.loading = true
+             if(this.img == null) this.form.Img = ""
                 UpdateUser(this.form).then(d => {
                     this.error = null
                     this.loading = false
@@ -183,6 +184,7 @@ export default {
   },
     created(){
         this.form = {...this.user}
+        
         Object.keys(this.user).forEach(key => {
             this.errors[key] = []
         })

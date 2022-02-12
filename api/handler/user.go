@@ -2,9 +2,7 @@ package handler
 
 import (
 	"fmt"
-	"io"
 	"net/http"
-	"os"
 	"shab/model"
 	"shab/utils"
 	"strconv"
@@ -159,32 +157,4 @@ func userIDFromToken(c echo.Context) uint {
 		return 0
 	}
 	return id
-}
-
-func (h *Handler) Upload(c echo.Context) error {
-	// Source
-	file, err := c.FormFile("file")
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, "error getting file : "+err.Error())
-	}
-	src, err := file.Open()
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, "error opening file : "+err.Error())
-	}
-	defer src.Close()
-
-	// Destination
-	name := "assets/" + file.Filename
-	dst, err := os.Create(name)
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, "error creating file : "+err.Error())
-	}
-	defer dst.Close()
-
-	// Copy
-	if _, err = io.Copy(dst, src); err != nil {
-		return c.JSON(http.StatusInternalServerError, "error copying file : "+err.Error())
-	}
-
-	return c.JSON(http.StatusOK, name)
 }
