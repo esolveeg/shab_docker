@@ -329,6 +329,11 @@ VALUES
         'post'
     ),
     (
+        'اخري',
+        'human-greeting-variant',
+        'post'
+    ),
+    (
         'مستشفيات وعيادات',
         'hospital-building',
         'project'
@@ -354,6 +359,11 @@ VALUES
         'project'
     ),
     (
+        'اخري',
+        'human-greeting-variant',
+        'project'
+    ),
+    (
         'ورشة عمل',
         'hospital-building',
         'event'
@@ -371,6 +381,11 @@ VALUES
     (
         'لقاء الرواد',
         'hospital-building',
+        'event'
+    ),
+    (
+        'اخري',
+        'human-greeting-variant',
         'event'
     )
     
