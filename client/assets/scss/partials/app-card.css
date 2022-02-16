@@ -1,9 +1,16 @@
 .app-card {
   position: rlative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 20px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .wrapper {
@@ -30,16 +37,26 @@ img {
 
 .water_mark {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   z-index: 1;
   opacity: 0.2;
-  transform: rotate(-35deg);
-  user-select: none;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .water_mark p {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin: 10px 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
@@ -62,9 +79,16 @@ img {
   padding: 20px;
   color: #fff;
   font-family: "CARD";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 400px) {
@@ -134,12 +158,14 @@ img {
 .card-serial {
   margin-right: 60px;
   z-index: 2;
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 @media (max-width: 400px) {
   .card-serial {
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
     margin-right: 35px;
   }
 }
@@ -167,3 +193,4 @@ img {
     padding-right: 8px;
   }
 }
+/*# sourceMappingURL=app-card.css.map */

@@ -21,13 +21,6 @@
             & span{
                 font-weight: 400;
             }
-            & .price{
-                background-color: var(--primary);
-                color: #fff;
-                padding: 20px 30px;
-                border-radius: 5px;
-                box-shadow: var(--box-shadow);
-            }
         }
         & .left {
             grid-area: sidebar;
@@ -42,8 +35,24 @@
                 }
             }
             & .subscribe{
+                display: flex;
+                
+                // justify-content: center;
+                & .price{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 20px;
+                    background-color: var(--primary);
+                    color: #fff;
+                //   padding:10px 20px;
+                  width: 100px;
+                    border-radius: 5px;
+                    box-shadow: var(--box-shadow);
+                }
                 & .app-btn{
-                    width: 100% ;
+                    margin: 0;
+                    width: calc(100% - 105px) ;
                 }
             }
         }

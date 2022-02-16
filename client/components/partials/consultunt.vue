@@ -11,6 +11,8 @@
      <div class="skills">
          <v-chip
       class="chip"
+      style="width:100px;text-align:center"
+      center
       v-for="skill in user.Skills.split(',')"
       :key="skill"
 

@@ -16,7 +16,7 @@
                     <p class="app-error" v-show="error !=null">{{error}}</p>
                     <v-text-field
                     :rules="createProjectValidation.Title"
-                    label="عنوان المشروع"
+                    label="اسم المشروع"
                     @keyup.enter="$refs.cat.focus()"
                     v-model="form.Title"
                     :error-messages="errors.Title"

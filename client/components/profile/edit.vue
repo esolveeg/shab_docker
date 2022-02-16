@@ -1,8 +1,6 @@
 <template>
     <div class="user__edit">
-        <div class="img">
-                <partials-member-avatar  :img="user.Img"/>
-        </div>
+        
         <v-form ref="form" v-model="valid">
                 <v-row>
                                      <!-- {{user}} -->
@@ -23,15 +21,7 @@
                     <p class="app-error" v-if="input.key == 'Email' && error != null" >{{error}}</p>
 
                 </v-col>
-                <v-col cols="12" md="6">
-                    <v-file-input
-                      truncate-length="15"
-                      lable="الصورة"
-                      v-model="img"
-                      outlined
-                    ></v-file-input>
-                </v-col>
-                <v-col cols="12" md="6">
+                <v-col cols="12" >
                     <v-textarea
                     :label="breif.label"
                     @keyup.enter="valid ? update : ''"
@@ -70,47 +60,35 @@ export default {
             inputs:[
                 {
                 label:"الاسم باللغة العربية",
+                disabled:true,
                 key:"Name_ar"
                 },
                 {
                 label:"الاسم باللغة الانجليزية",
-                key:"Name"
+                key:"Name",
+                disabled:true
                 },
                 {
-                label:"البريد الالكتروني",
-                key:"Email"
+                    label:"البريد الالكتروني",
+                    key:"Email"
                 },
                 {
-                label:"كلمة السر",
-                key:"Password",
-                hint:"اترك هذا الحقل خاليا ان كنت لا تريد تغيير كلمة السر"
+                    label:"كلمة السر",
+                    key:"Password",
+                    hint:"اترك هذا الحقل خاليا ان كنت لا تريد تغيير كلمة السر"
                 },
                 
                  
                  {
                      label:"الهاتف",
-                key:"Phone"
-                },
-                 {
-                label:"الموقع الالكترون",
-                key:"Website"
-                },
-                 {
-                label:"رابط تويتر",
-                key:"Twitter"
-                },
-                 {
-                label:"رابط انستجرام",
-                key:"Instagram"
-                },
-               
-                
-                     {
+                    key:"Phone"
+                },                
+                {
                     label:"العضوية",
                     key:"Role",
                     disabled:true
-    
-                    },
+
+                },
                 
             ],
             breif: {

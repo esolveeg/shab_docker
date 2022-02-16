@@ -41,17 +41,24 @@
 .user__membership .v-tabs-bar .v-tab {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   margin-bottom: 20px;
   margin-right: 10px;
 }
 
 .user__membership .v-slide-group__content {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .user__membership .v-tabs-slider-wrapper {
   display: none;
+}
+
+.v-chip .v-chip__content {
+  text-align: center;
 }
 
 :root {
@@ -101,7 +108,8 @@
 }
 
 .app-btn {
-  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
   width: 200px;
   padding: 0 5px !important;
   height: 60px !important;
@@ -111,6 +119,7 @@
   border-radius: 30px !important;
   font-size: 20px !important;
   background-color: #fff !important;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
   border-radius: 30px;
   letter-spacing: 0 !important;
@@ -144,6 +153,7 @@ a {
 .app-error {
   font-size: 16px;
   color: var(--danger);
+  -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
 }
 
@@ -152,10 +162,19 @@ a {
   top: 0;
   left: 0;
   background-color: var(--primary);
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
   z-index: 100000;
   width: 100vw;
@@ -189,6 +208,25 @@ a {
 .bg-primary {
   background-color: var(--primary) !important;
   color: #fff;
+}
+
+@-webkit-keyframes project-animation {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  50% {
+    top: 60%;
+    opacity: 1;
+  }
+  75% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 
 @keyframes project-animation {
@@ -228,8 +266,10 @@ a {
   position: absolute;
   top: 5px;
   left: 50%;
-  transform: translate(-50%, 0);
-  animation: project-animation 1s 1s linear infinite;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: project-animation 1s 1s linear infinite;
+          animation: project-animation 1s 1s linear infinite;
 }
 
 strong {
@@ -258,10 +298,18 @@ strong {
 }
 
 .nav__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
   position: sticky;
+  -webkit-transition: all .3s  ease-in;
   transition: all .3s  ease-in;
 }
 
@@ -280,7 +328,8 @@ strong {
   height: 25px;
   overflow: hidden;
   display: inline-block;
-  transform: translateX(20%);
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
 }
 
 .nav__wrapper .profile, .nav__wrapper .logout {
@@ -311,8 +360,12 @@ strong {
 }
 
 .nav__wrapper .desktop-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
   padding-left: 0 !important;
 }
@@ -391,7 +444,8 @@ strong {
   padding: 0;
   left: 0;
   z-index: 6;
-  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .fixed-nav .cls-1 {
@@ -493,9 +547,15 @@ footer .copyrights P {
   margin: 10px auto;
   color: #fff !important;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -524,3 +584,4 @@ footer-logo {
 .avatars .member-avatar:hover {
   border: 5px solid var(--primary) !important;
 }
+/*# sourceMappingURL=app.css.map */

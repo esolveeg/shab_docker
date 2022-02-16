@@ -17,7 +17,7 @@
         v-if="user.Role_id == 3"
       />
       <div class="card-data">
-    <div class="water_mark">
+    <div class="water_mark"  v-if="$route.name != 'profile'">
       <p v-for="i in 20" :key="i">معاينة</p>
     </div>
         <h4 class="card-name"></h4>

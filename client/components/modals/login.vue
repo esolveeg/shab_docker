@@ -149,13 +149,8 @@ import {snackBar} from '@/utils/Helpers'
              this.valid = valid
         },
         userNameValidate(){
-            const u = this.form.username
-            
-                // saudi arabian phone number regex validation
-                const regex = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/)
-                this.errors.username = []
-                if(!regex.test(u)){
-                    this.errors.username.push('لا بد ان يكون الرقم هو هاتف محمول سعودي')
+                if(!this.form.username){
+                    this.errors.username.push('لا بد ادخال رقم الهاتف')
                 }
             
         },

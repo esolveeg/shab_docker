@@ -1,5 +1,5 @@
 <template>
-   <div class="event">
+   <div class="event"  @click.prevent="$router.push(`events/${event.Id}`)">
        <div class="top">
            <img :src="event.Img"/>
            <p class="cat">

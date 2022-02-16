@@ -41,19 +41,19 @@
 .user__membership .v-tabs-bar .v-tab {
   background-color: #fff;
   border-radius: 10px;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
   margin-bottom: 20px;
   margin-right: 10px;
 }
 
 .user__membership .v-slide-group__content {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .user__membership .v-tabs-slider-wrapper {
   display: none;
 }
-/*# sourceMappingURL=overrides.css.map */
+
+.v-chip .v-chip__content {
+  text-align: center;
+}

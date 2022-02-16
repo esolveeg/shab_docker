@@ -9,10 +9,6 @@
                     <h2 >{{event.Title}}</h2>
                     <span>{{event.CatName}}</span>
                 </div>
-                <div class="price">
-                    {{price(event.Price)}}
-                </div>
-
             </div>
             <div v-html="event.Breif"></div>
         </div>
@@ -28,6 +24,9 @@
         </div>
         <div class="subscribe" @click.prevent="subscribeModal = true">
             <v-btn class="app-btn" >اشترك</v-btn>
+            <div class="price">
+                  {{price(event.Price)}}
+              </div>
         </div>
         </div>
     </div>

@@ -39,15 +39,6 @@
   font-weight: 400;
 }
 
-.event-page .event-wrapper .title .price {
-  background-color: var(--primary);
-  color: #fff;
-  padding: 20px 30px;
-  border-radius: 5px;
-  -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
-}
-
 .event-page .event-wrapper .left {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -62,7 +53,33 @@
   width: 100%;
 }
 
+.event-page .event-wrapper .left .subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.event-page .event-wrapper .left .subscribe .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+  background-color: var(--primary);
+  color: #fff;
+  width: 100px;
+  border-radius: 5px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
 .event-page .event-wrapper .left .subscribe .app-btn {
-  width: 100%;
+  margin: 0;
+  width: calc(100% - 105px);
 }
 /*# sourceMappingURL=event.css.map */
